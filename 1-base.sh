@@ -21,10 +21,10 @@ PKGS=(
         'xorg-xinput'           # Xorg xinput
         'mesa'                  # Open source version of OpenGL
 
-    # --- Setup Desktop
-        'awesome'               # Awesome Desktop
+    # --- Setup Desktop'
+        'budgie-desktop'               # Awesome Desktop
         'xfce4-power-manager'   # Power Manager 
-        'rofi'                  # Menu System
+        #'rofi' Menu System
         'picom'                 # Translucent Windows
         'xclip'                 # System Clipboard
         'gnome-polkit'          # Elevate Applications
