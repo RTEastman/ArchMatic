@@ -49,7 +49,7 @@ locale-gen
 timedatectl --no-ask-password set-timezone America/New_York
 timedatectl --no-ask-password set-ntp 1
 
-localectl --no-ask-password set-locale LANG="en_US.UTF-8" LC_COLLATE="" LC_TIME="en_US.UTF-8"
+localectl --no-ask-password set-locale LANG="en_US.UTF-8" LC_COLLATE="en_US.UTF-8" LC_TIME="en_US.UTF-8"
 
 # Set keymaps
 
