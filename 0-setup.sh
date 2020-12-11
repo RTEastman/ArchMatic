@@ -48,10 +48,11 @@ sed -i 's/^#en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/' /etc/locale.gen
 locale-gen
 timedatectl --no-ask-password set-timezone America/Chicago
 timedatectl --no-ask-password set-ntp 1
-echo "this far"
+
 localectl --no-ask-password set-locale LANG="en_US.UTF-8" LC_COLLATE="" LC_TIME="en_US.UTF-8"
 
 # Set keymaps
+echo "this far"
 localectl --no-ask-password set-keymap us
 
 # Hostname
