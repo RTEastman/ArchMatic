@@ -54,9 +54,9 @@ sudo sed -i 's|xserverauthfile=\$HOME/.serverauth.\$\$|xserverauthfile=\$XAUTHOR
 echo -e "\nConfiguring LTS Kernel as a secondary boot option"
 
 sudo cp /boot/loader/entries/arch.conf /boot/loader/entries/arch-lts.conf
-sudo sed -i 's|Arch Linux|Arch Linux LTS Kernel|g' /boot/loader/entries/arch-lts.conf
-sudo sed -i 's|vmlinuz-linux|vmlinuz-linux-lts|g' /boot/loader/entries/arch-lts.conf
-sudo sed -i 's|initramfs-linux.img|initramfs-linux-lts.img|g' /boot/loader/entries/arch-lts.conf
+sudo sed -i 's|Arch Linux|Arch Linux Zen Kernel|g' /boot/loader/entries/arch-lts.conf
+sudo sed -i 's|vmlinuz-linux|vmlinuz-linux-zen|g' /boot/loader/entries/arch-lts.conf
+sudo sed -i 's|initramfs-linux.img|initramfs-linux-zen.img|g' /boot/loader/entries/arch-lts.conf
 
 # ------------------------------------------------------------------------
 
