@@ -15,7 +15,7 @@ echo -e "\nGenaerating .xinitrc file"
 
 # Generate the .xinitrc file so we can launch Awesome from the
 # terminal using the "startx" command
-cat <<EOF > ${HOME}/.xinitrc
+#cat <<EOF > ${HOME}/.xinitrc
 #!/bin/bash
 # Disable bell
 xset -b
@@ -53,10 +53,10 @@ sudo sed -i 's|xserverauthfile=\$HOME/.serverauth.\$\$|xserverauthfile=\$XAUTHOR
 
 echo -e "\nConfiguring LTS Kernel as a secondary boot option"
 
-sudo cp /boot/loader/entries/arch.conf /boot/loader/entries/arch-lts.conf
-sudo sed -i 's|Arch Linux|Arch Linux Zen Kernel|g' /boot/loader/entries/arch-lts.conf
-sudo sed -i 's|vmlinuz-linux|vmlinuz-linux-zen|g' /boot/loader/entries/arch-lts.conf
-sudo sed -i 's|initramfs-linux.img|initramfs-linux-zen.img|g' /boot/loader/entries/arch-lts.conf
+sudo cp /boot/loader/entries/arch.conf /boot/loader/entries/arch-zen.conf
+sudo sed -i 's|Arch Linux|Arch Linux zen Kernel|g' /boot/loader/entries/arch-zen.conf
+sudo sed -i 's|vmlinuz-linux|vmlinuz-linux-zen|g' /boot/loader/entries/arch-zen.conf
+sudo sed -i 's|initramfs-linux.img|initramfs-linux-zen.img|g' /boot/loader/entries/arch-zen.conf
 
 # ------------------------------------------------------------------------
 
@@ -121,9 +121,9 @@ echo "
 ###############################################################################
 "
 # Remove no password sudo rights
-sed -i 's/^%wheel ALL=(ALL) NOPASSWD: ALL/# %wheel ALL=(ALL) NOPASSWD: ALL/' /etc/sudoers
+#sed -i 's/^%wheel ALL=(ALL) NOPASSWD: ALL/# %wheel ALL=(ALL) NOPASSWD: ALL/' /etc/sudoers
 # Add sudo rights
-sed -i 's/^# %wheel ALL=(ALL) ALL/%wheel ALL=(ALL) ALL/' /etc/sudoers
+#sed -i 's/^# %wheel ALL=(ALL) ALL/%wheel ALL=(ALL) ALL/' /etc/sudoers
 
 # Clean orphans pkg
 if [[ ! -n $(pacman -Qdt) ]]; then
