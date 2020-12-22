@@ -12,7 +12,7 @@ echo -e "\nINSTALLING AUR SOFTWARE\n"
 cd "${HOME}"
 
 echo "CLOING: YAY"
-git clone "https://aur.archlinux.org/yay.git"
+#git clone "https://aur.archlinux.org/yay.git"
 
 
 PKGS=(
@@ -41,7 +41,7 @@ PKGS=(
 
 
 cd ${HOME}/yay
-makepkg -si
+#makepkg -si
 
 for PKG in "${PKGS[@]}"; do
     yay -S --noconfirm $PKG
