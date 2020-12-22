@@ -13,7 +13,7 @@ PKGS=(
 
     # SYSTEM --------------------------------------------------------------
 
-    'linux-lts'             # Long term support kernel
+    'linux-zen'             # Long term support kernel
 
     # TERMINAL UTILITIES --------------------------------------------------
 
@@ -38,7 +38,7 @@ PKGS=(
     'unrar'                 # RAR compression program
     'unzip'                 # Zip compression program
     'wget'                  # Remote content retrieval
-    'terminator'            # Terminal emulator
+    'alacritty'            # Terminal emulator
     'vim'                   # Terminal Editor
     'zenity'                # Display graphical dialog boxes via shell scripts
     'zip'                   # Zip compression program
@@ -112,7 +112,7 @@ PKGS=(
 
 for PKG in "${PKGS[@]}"; do
     echo "INSTALLING: ${PKG}"
-    sudo pacman -S "$PKG" --noconfirm --needed
+    pacman -S "$PKG" --noconfirm --needed
 done
 
 echo -e "\nDone!\n"
